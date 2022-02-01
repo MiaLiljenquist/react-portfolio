@@ -1,4 +1,4 @@
-import React, {Conponent} from "react";
+import React, { Conponent } from "react";
 
 export default class portfolioContainer extends Cpmponent{
   render(){
