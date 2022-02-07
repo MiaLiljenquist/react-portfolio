@@ -3,8 +3,12 @@ import React, { Component } from 'react';
 import PortfolioItem from './portfolio-item';
 
 export default class PortfolioContainer extends Component {
-  Constructor() {
-    console.log("Portfolio container hes rendered");
+  constructor() {
+    super();
+
+    this.state = {
+      pageTitle: "Hey look at my portfolio"
+    };
   }
 
 
@@ -14,14 +18,14 @@ export default class PortfolioContainer extends Component {
 
     return data.map(item => {
       return <PortfolioItem  title={item} url={"google.com"} />;
-    })
+    });
   }
 
 
   render() {
       return(
          <div>
-             <h2>Portfolio items go here...</h2>
+             <h2>{this.state.pageTitle}</h2>
 
              {this.PortfolioItem()}
          </div> 
