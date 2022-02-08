@@ -15,6 +15,8 @@ export default class PortfolioContainer extends Component {
         {title: "City Hall"}
       ]
     };
+    
+    this.handlePageTitleUpdate = this.handlePageTitleUpdate.bind(this);
   }
 
 
@@ -28,7 +30,7 @@ export default class PortfolioContainer extends Component {
   
   handlePageTitleUpdate() {
     this.setState({
-      pageTitle: "All my damn secrets"
+      pageTitle: "And all my damn secrets"
     })
   }
 
