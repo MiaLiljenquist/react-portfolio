@@ -25,6 +25,12 @@ export default class PortfolioContainer extends Component {
       return <PortfolioItem  title={item.title} url={"google.com"} />;
     });
   }
+  
+  handlePageTitleUpdate() {
+    this.setState({
+      pageTitle: "All my damn secrets"
+    })
+  }
 
 
   render() {
@@ -33,7 +39,13 @@ export default class PortfolioContainer extends Component {
              <h2>{this.state.pageTitle}</h2>
 
              {this.PortfolioItem()}
-         </div> 
+
+             <hr/>
+
+             <button onClick={this.handlePageTitleUpdate}>Change Title</button>
+             </div>
+            
       );
-  }
+  
+      }        
 }
