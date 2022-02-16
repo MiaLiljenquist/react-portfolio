@@ -6,34 +6,20 @@ export default class PortfolioContainer extends Component {
   constructor() {
     super();
 
-    this.state = {
-      pageTitle: "Hey look at my portfolio",
-      data: [
-        {title: "McDounles"},
-        {title: "Smiths"}, 
-        {title: "Ace Hardwere"},
-        {title: "City Hall"}
-      ]
-    };
-    
-    this.handlePageTitleUpdate = this.handlePageTitleUpdate.bind(this);
+   this.state = {
+      pageTitle: "Welcome to my portfolio"
+   }
   }
 
-
-
   PortfolioItem() {
+    const data = ["McDounles","Smiths","Ace Hardwere","City Hall"];
 
     return this.state.data.map(item => {
       return <PortfolioItem  title={item.title} url={"google.com"} />;
     });
   }
   
-  handlePageTitleUpdate() {
-    this.setState({
-      pageTitle: "And all my damn secrets"
-    })
-  }
-
+ 
 
   render() {
       return(
@@ -42,9 +28,7 @@ export default class PortfolioContainer extends Component {
 
              {this.PortfolioItem()}
 
-             <hr/>
-
-             <button onClick={this.handlePageTitleUpdate}>Change Title</button>
+            
              </div>
             
       );
