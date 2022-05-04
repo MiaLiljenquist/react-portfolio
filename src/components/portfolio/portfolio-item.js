@@ -7,6 +7,7 @@ export default function(props) {
   // - logo
   // - description: description
   // - id: id
+  //hi
         const { id, description,  thumb_image_url, logo} = props.item;
     return (
         <div>
