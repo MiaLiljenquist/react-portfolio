@@ -7,10 +7,11 @@ export default function(props) {
   // - logo
   // - description: description
   // - id: id
-  //hi
         const { id, description,  thumb_image_url, logo} = props.item;
     return (
         <div>
+            <img src={thumb_image_url} />
+            <img src= {logo} />
             <div>{description}</div>
            <Link to={`/portfolio/${id}`}>Link</Link>
         </div>
